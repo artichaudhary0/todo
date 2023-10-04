@@ -37,22 +37,26 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void saveTask() {
-    setState(() {
-      if (controller.text.isEmpty) {
-        // Navigator.of(context).pop();
-      } else {
-        db.todoList.add([controller.text, false]);
-        controller.clear();
-      }
-    });
+    setState(
+      () {
+        if (controller.text.isEmpty) {
+          // Navigator.of(context).pop();
+        } else {
+          db.todoList.add([controller.text, false]);
+          controller.clear();
+        }
+      },
+    );
     db.updateDatabase();
     Navigator.of(context).pop();
   }
 
   void deleteTask(int index) {
-    setState(() {
-      db.todoList.removeAt(index);
-    });
+    setState(
+      () {
+        db.todoList.removeAt(index);
+      },
+    );
     db.updateDatabase();
   }
 
