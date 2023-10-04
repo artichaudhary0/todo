@@ -7,7 +7,6 @@ Welcome to the Simple ToDo Application, a lightweight task manager built using t
 - Usage
 - Samples
 - Contribution
-- License
 
 ## Features
 - Add, delete, and mark tasks as completed.
